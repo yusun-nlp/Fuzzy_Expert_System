@@ -1,0 +1,596 @@
+.button-theme {
+    background: #f0151f;
+}
+
+.button-theme:hover {
+    background: #dc141d;
+}
+
+.dashboard-nav ul {
+    border-bottom: 1px solid #dc141d;
+}
+
+.tab-box-3 .nav-link {
+    border: solid 1px #f0151f;
+    color: #f0151f;
+}
+
+.tab-box-3 .active{
+    background-color: #f0151f!important;
+    border: solid 1px #f0151f;
+}
+
+.tab-box-3 .active.a2 {
+    background-color: transparent!important;
+    border: solid 1px transparent;
+}
+
+.new-user-box .follow:hover{
+    background: #f0151f;
+    color: #fff;
+}
+
+.advantages-box .icon {
+    background: #f0151f;
+}
+
+.service-info-2 .icon i{
+    color: #f0151f;
+}
+
+.counters-2{
+    background: #f0151f;
+}
+
+.pages-404-2 .btn, .pages-404 .btn:hover, .pages-404 .btn:active {
+    background: #f0151f;
+}
+
+.text .ratings-box {
+    background: #f0151f;
+}
+
+.setting-button i{
+    color: #f0151f;
+}
+
+.btn-white{
+    background: #f0151f;
+    color: #fff;
+}
+
+.btn-white:hover{
+    color: #fff;
+    background: #dc141d;
+}
+
+.top-header {
+    background-color: #f0151f;
+}
+
+#page_scroller {
+    background: #f0151f;
+}
+
+.dashboard-nav{
+    background: #f0151f;
+}
+
+/** Tab box 2 start **/
+.tab-box-2 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background: transparent;
+    border-bottom: solid 2px #f0151f;
+    border-radius: 0;
+    color: #f0151f;
+}
+
+.tab-box .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background: #f0151f;
+    border-radius: 0;
+}
+
+.checkbox-theme input[type="checkbox"]:checked + label::before {
+    border: 2px solid #f0151f;
+}
+
+.main-header .dropdown-menu a:hover {
+    color: #f0151f;
+}
+
+input[type=checkbox]:checked + label:before {
+    color: #f0151f;
+}
+
+.banner-bg-color{
+    background: #f0151f;
+}
+
+.btn-theme{
+    background: #f0151f;
+    border: solid 1px #f0151f;
+}
+
+.btn-theme:hover{
+    background: #dc141d;
+    border: solid 1px #dc141d;
+}
+
+.btn-white-lg-outline:hover {
+    color: #FFF;
+    background: #f0151f;
+    border: solid 2px #f0151f;
+}
+
+.properties-amenities ul li i {
+    color: #f0151f
+}
+
+.pages-404 .btn {
+    background: #f0151f;
+}
+
+.pages-404 .btn:hover {
+    background: #dc141d;
+}
+
+.border-button-theme {
+    color: #f0151f;
+    border: 2px solid #f0151f;
+}
+
+.banner-detail-box .red-box {
+    background: #f0151f url(../../img/slider-detail.png) center center;
+}
+
+.banner-detail-box .white-box .slide-price {
+    color: #f0151f;
+}
+
+.banner-detail-box .white-box .slide-location::after {
+    background-color: #f0151f;
+}
+
+.search-options-btn, .search-options-btn:hover {
+    background: #f0151f;
+}
+
+.search-button {
+    background: #f0151f;
+}
+
+.intro-section {
+    background: #f0151f;
+}
+
+.search-button:hover {
+    color: #fff;
+    background: #dc141d;
+}
+
+.popular .price-for-user {
+    color: #f0151f;
+}
+
+.dolar{
+    color: #f0151f;
+}
+
+.bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark {
+    color: #f0151f;
+}
+
+.bootstrap-select .dropdown-menu > .active > a,
+.bootstrap-select .dropdown-menu > .active > a:focus,
+.bootstrap-select .dropdown-menu > .active > a:hover {
+    color: #f0151f;
+}
+
+.bootstrap-select .dropdown-menu li a:hover .text {
+    color: #f0151f;
+}
+
+.tag {
+    background: #f0151f;
+}
+
+.tag::after {
+    border-left: 10px solid #f0151f;
+}
+
+.recent-properties-box .detail header::after {
+    background-color: #f0151f;
+}
+
+.blog-1 .detail h3 a:hover{
+    color: #f0151f;
+}
+
+.blog-1 .date-box{
+    background: #f0151f;
+}
+
+.blog-1 .date-box::after {
+    border-left: 15px solid #f0151f;
+}
+
+.property-box .detail .title a {
+    color: #f0151f;
+}
+
+footer .footer-item .contact-info li label a:hover {
+    color: #f0151f;
+}
+
+.service-info .icon i{
+    color: #f0151f;
+}
+
+.service-box .heading .title h4 a:hover {
+    color: #f0151f;
+}
+
+.main-header .form-inline .submit {
+    border: solid 1px #f0151f;
+    color: #f0151f;
+}
+
+.main-header .form-inline .submit:hover {
+    border: solid 1px #f0151f;
+    background: #f0151f;
+    color: #fff;
+}
+
+.main-header .navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: #f0151f;
+}
+
+/*.main-header .navbar-expand-lg .navbar-nav .active .nav-link {
+    color: #f0151f !important;
+}*/
+
+.main-header .navbar-expand-lg .user-account li a:hover {
+    color: #f0151f;
+}
+
+.plan .price-header h1 {
+    color: #f0151f;
+}
+
+.btn-outline {
+    border: solid 1px #f0151f;
+    color: #f0151f;
+}
+
+.btn-outline:hover {
+    border: solid 1px #dc141d;
+    background: #dc141d;
+    color: #fff;
+}
+
+.btn-outline-2 {
+    border: solid 2px #f0151f;
+    color: #f0151f;
+    font-weight: 600;
+}
+
+.heading-properties-2 h3 span {
+    color: #f0151f;
+}
+
+.btn-outline-2:hover {
+    border: solid 2px #dc141d;
+    background: #dc141d;
+    color: #fff;
+}
+
+.footer .form-inline .btn{
+    background: #f0151f;
+    color: #fff;
+}
+
+.search-box-2{
+    background: #f0151f;
+}
+
+.about-box .detail h3 {
+    color: #f0151f;
+}
+
+li.active.filtr-button.filtr a{
+    color: #f0151f;
+}
+
+.coming-soon-inner h1 span{
+    color: #f0151f;
+}
+
+.filteriz-navigation li a:hover{
+    color: #f0151f;
+}
+
+.sub-banner .page-info .breadcrumb-area ul li a:hover {
+    color: #f0151f;
+}
+
+
+.show-more-options i{
+    color: #f0151f;
+}
+
+.form-content-box .footer span a {
+    color: #f0151f;
+}
+
+.pagination > li > .active {
+    background: #f0151f;
+}
+
+.pagination > li > a:hover {
+    background: #f0151f;
+    color: #fff;
+}
+
+.read-more {
+    color: #f0151f;
+}
+
+.blog-3 .date-box {
+    background: #f0151f;
+}
+
+.blog-3 .date-box::after {
+    border-right: 15px solid #f0151f;
+}
+
+.blog-3 .detail h3 a {
+    color: #f0151f;
+}
+
+.blog-3 .detail .post-meta span a i {
+    color: #f0151f;
+}
+
+.range-slider .ui-slider .ui-slider-handle {
+    background: #f0151f;
+}
+
+.our-agent-sidebar .carousel-indicators .active {
+    background: #f0151f;
+}
+
+.range-slider .ui-slider .ui-slider-handle {
+    border: 2px solid #f0151f;
+}
+
+.range-slider .ui-widget-header {
+    background-color: #f0151f;
+}
+
+.main-header .navbar-expand-lg .navbar-nav .link-color {
+    color: #f0151f;
+    border: solid 1px #f0151f;
+}
+
+.main-header .navbar-expand-lg .navbar-nav .link-color:hover{
+    color: #fff;
+    border: solid 1px #f0151f;
+    background: #f0151f;
+}
+
+.posts-by-category ul li a:hover {
+    color: #f0151f;
+}
+
+.tags-box ul li a:hover {
+    border: 1px solid #f0151f;
+    color: #f0151f;
+}
+
+.latest-tweet a {
+    color: #f0151f;
+}
+
+.blog-2 h3 a:hover{
+    color: #f0151f;
+}
+
+.blog-tags a:hover {
+    border: 1px solid #f0151f;
+    color: #f0151f;
+}
+
+.blog-2 .date-box {
+    background: #f0151f;
+}
+
+.blog-2 .detail h4 a:hover{
+    color: #f0151f;
+}
+
+.price-box span{
+    color: #fff;
+    font-weight: 700;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+    color: #f0151f;
+}
+
+.breadcrumbs li a:hover {
+    color: #f0151f;
+}
+
+.helping-center ul li i {
+    color: #f0151f;
+}
+
+.my-account-box .title::after {
+    background-color: #f0151f;
+}
+
+.breadcrumb-nav ul .active {
+    color: #f0151f;
+}
+
+.photoUpload {
+    background: #f0151f;
+}
+
+.typography-page mark.color {
+    background-color: #f0151f;
+}
+
+.faq-accordion .card-header .collapsed.card-title:before {
+    color: #f0151f;
+}
+
+.manage-table .title-container h2 a {
+    color: #f0151f;
+}
+
+.manage-table .action a:hover {
+    color: #f0151f;
+}
+
+.comment-content .btn-1:hover{
+    background: #f0151f;
+    color: #fff;
+}
+
+.dashboard-nav ul li span.nav-tag {
+    color: #f0151f;
+}
+
+.comment-content h6 span a{
+    color: #f0151f;
+}
+
+.comment-content h6 span a:hover{
+    color: #dc141d;
+}
+
+.bg-active {
+    background: #f0151f;
+    color: #fff !important;
+}
+
+.typography .list-3 li:before, .list-2 li:before, .list-1 li:before {
+    color: #f0151f;
+}
+
+.numbered.color.filled ol > li::before {
+    border: 1px solid #f0151f;
+    background-color: #f0151f;
+}
+
+.numbered.color ol > li::before {
+    border: 1px solid #f0151f;
+    color: #f0151f;
+}
+
+.widget-link:hover {
+    color: #f0151f;
+}
+
+.coming-soon-inner .btn, .coming-soon-inner .btn:hover, .coming-soon-inner .btn:active {
+    background: #f0151f;
+}
+
+.property-box-2 .detail .title a {
+    color: #f0151f;
+}
+
+.tabbing-box .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background-color: #f0151f;
+}
+
+.tabbing-box .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link:hover {
+    background-color: #f0151f;
+}
+
+.map-marker:hover {
+    background-color: #f0151f;
+    cursor: pointer;
+}
+
+.map-marker:hover:before {
+    border-color: #f0151f transparent transparent transparent;
+}
+
+.map-marker.featured:hover {
+    background-color: #f0151f;
+}
+
+.map-marker.featured:hover:before {
+    border-color: #f0151f transparent transparent transparent;
+}
+
+.map-marker .icon {
+    border: 3px solid #f0151f;
+}
+
+.marker-active .map-marker {
+    background-color: #f0151f;
+}
+
+.marker-active .map-marker:before {
+    border-color: #f0151f transparent transparent transparent;
+}
+
+.slick-arrow-buton:hover{
+    background: #f0151f;
+}
+
+.map-properties .map-content h4 a {
+    color: #f0151f;
+}
+
+.dropzone-design:hover {
+    border: 2px dashed #f0151f;
+}
+
+
+@media (max-width: 992px) {
+    .main-header .navbar-expand-lg .navbar-nav .nav-link:hover {
+        color: #f0151f!important;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #f0151f;
+    }
+
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+        background-color: #f0151f !important;
+    }
+
+    .main-header .navbar-default .nav > li > a:hover {
+        background: #f0151f;
+    }
+
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+        background-color: #f0151f !important;
+    }
+
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        background: #eee;
+    }
+}
+
+@media (min-width: 992px) {
+    /*.header-transparent .navbar-expand-lg .navbar-nav .active .nav-link,
+    .header-transparent .navbar-expand-lg .navbar-nav .nav-link:hover
+    {
+        color: #fff !important;
+    }
+
+    .header-transparent .navbar-expand-lg .navbar-nav .nav-link {
+        color: #fff;
+    }
+
+    .header-transparent .link-color {
+        color: #fff;
+    }*/
+}

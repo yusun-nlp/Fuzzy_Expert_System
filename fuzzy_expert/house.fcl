@@ -1,0 +1,248 @@
+FUNCTION_BLOCK house
+
+//define variables
+VAR_INPUT					//define input variables
+	room_num: REAL;			//几房
+	room_area: REAL;		//面积
+	room_floor: REAL;		//楼层
+	room_chaoxiang: REAL;	//朝向
+	room_status: REAL;		//装修程度
+	room_time: REAL;		//建成时间
+	room_price: REAL;		//总价
+	if_subway: REAL;		//是否近地铁
+	area: REAL;				//地区
+END_VAR
+
+VAR_OUTPUT					//define output variables
+	num_people: REAL;		//if suitable for many people to live in
+	traffic: REAL;
+	budget: REAL;
+	invest: REAL;			//if suitable for investment
+	rigid: REAL;
+	improvement: REAL;
+	child: REAL;			//if suitable for kids
+	elder: REAL;			//if suitable for elders
+END_VAR
+
+//define Fuzzifiers
+FUZZIFY room_num
+	TERM small := (0, 1) (1, 1) (2, 0);
+	TERM normal := (1, 0) (2, 1) (3, 1) (4, 0);
+	TERM big := (3, 0) (4, 1) (6, 1) (7, 0);
+	TERM veryBig := (6, 0) (7, 1) (20, 1);
+END_FUZZIFY
+
+FUZZIFY room_area
+	TERM verySmall := (0, 1) (50, 0);
+	TERM small := (40, 0) (60, 1) (80, 0);
+	TERM medium := (60, 0) (80, 1) (90, 1) (110, 0);
+	TERM big := (100, 0) (130, 1) (160, 1) (200, 0);
+	TERM veryBig := (180, 0) (200, 1) (300, 1) (500, 0);
+	TERM extremelyBig := (400, 0) (600, 1) (2000, 1);
+END_FUZZIFY
+
+FUZZIFY room_floor				//0: low; 1: medium 2: high
+	TERM low := (0, 1) (1, 0);
+	TERM medium := (0, 0) (1, 1) (2, 0);
+	TERM high := (1, 0) (2, 1);
+END_FUZZIFY
+
+FUZZIFY room_chaoxiang			//南北(0)>南(1)>东南(2)>东(3)>西南(4)>西(5)>北(6)
+	TERM n_and_s := (0, 1) (1, 0);
+	TERM south := (0, 1) (1, 1) (2, 0);
+	TERM well := (1, 0) (2, 1) (3, 1) (4, 0);
+	TERM bad := (3, 0) (5, 1) (6, 1);
+END_FUZZIFY
+
+FUZZIFY room_status
+	TERM none := (0, 1) (1, 0);
+	TERM okay := (0, 0) (1, 1) (2, 0);
+	TERM well := (1, 0) (2, 1);
+END_FUZZIFY
+
+FUZZIFY room_time
+	TERM veryOld := (1970, 1) (1980, 1) (2000, 0);
+	TERM old := (1985, 0) (1995, 1) (2003, 0);
+	TERM medium := (2000, 0) (2006, 1) (2010, 0);
+	TERM new := (2007, 0) (2012, 1) (2015, 0);
+	TERM veryNew := (2014, 0) (2019, 1);
+END_FUZZIFY
+
+FUZZIFY room_price
+	TERM veryCheap := (40, 1) (70, 1) (100, 0);
+	TERM cheap := (80, 0) (150, 1) (200, 0);
+	TERM medium := (180, 0) (250, 1) (300, 1) (400, 0);
+	TERM expensive := (380, 0) (450, 1) (600, 1) (800, 0);
+	TERM veryExpensive := (700, 0) (1000, 1) (50000, 1);
+END_FUZZIFY
+
+FUZZIFY if_subway
+	TERM true := (0, 1) (1, 0);
+	TERM false := (0, 0) (1, 1);
+END_FUZZIFY
+
+//静安0 黄浦1 徐汇2 长宁3 虹口4 普陀5 杨浦6
+//浦东新区7 闵行8
+//宝山9 嘉定10 松江11 青浦12 
+//奉贤13 金山14
+FUZZIFY area
+	TERM center := (0, 1) (2, 1) (7, 0);
+	TERM medium := (5, 0) (6, 1) (7, 1) (9, 0);
+	TERM away := (8, 0) (9, 1) (11, 1) (13, 0);
+	TERM faraway := (12, 0) (13, 1) (14, 1);
+END_FUZZIFY
+
+//define Defuzzifiers
+DEFUZZIFY num_people
+	TERM veryBad := (0,1) (0.2,0);
+	TERM bad := (0,0) (0.1,1) (0.5,0);
+	TERM average:= (0,0) (0.5,1) (1,0);
+	TERM good:= (0.5,0) (0.9,1) (1,0);
+	TERM veryGood:= (0.8,0) (1,1);
+	METHOD : COG;
+	DEFAULT := 0.5;
+END_DEFUZZIFY
+
+DEFUZZIFY budget
+	TERM veryBad := (0,1) (0.2,0);
+	TERM bad := (0,0) (0.1,1) (0.5,0);
+	TERM average:= (0,0) (0.5,1) (1,0);
+	TERM good:= (0.5,0) (0.9,1) (1,0);
+	TERM veryGood:= (0.8,0) (1,1);
+	METHOD : COG;
+	DEFAULT := 0.5;
+END_DEFUZZIFY
+
+DEFUZZIFY traffic
+	TERM veryBad := (0,1) (0.2,0);
+	TERM bad := (0,0) (0.1,1) (0.5,0);
+	TERM average:= (0,0) (0.5,1) (1,0);
+	TERM good:= (0.5,0) (0.9,1) (1,0);
+	TERM veryGood:= (0.8,0) (1,1);
+	METHOD : COG;
+	DEFAULT := 0.5;
+END_DEFUZZIFY
+
+DEFUZZIFY invest
+	TERM veryBad := (0,1) (0.2,0);
+	TERM bad := (0,0) (0.1,1) (0.5,0);
+	TERM average:= (0,0) (0.5,1) (1,0);
+	TERM good:= (0.5,0) (0.9,1) (1,0);
+	TERM veryGood:= (0.8,0) (1,1);
+	METHOD : COG;
+	DEFAULT := 0.5;
+END_DEFUZZIFY
+
+DEFUZZIFY rigid
+	TERM veryBad := (0,1) (0.2,0);
+	TERM bad := (0,0) (0.1,1) (0.5,0);
+	TERM average:= (0,0) (0.5,1) (1,0);
+	TERM good:= (0.5,0) (0.9,1) (1,0);
+	TERM veryGood:= (0.8,0) (1,1);
+	METHOD : COG;
+	DEFAULT := 0.5;
+END_DEFUZZIFY
+
+DEFUZZIFY improvement
+	TERM veryBad := (0,1) (0.2,0);
+	TERM bad := (0,0) (0.1,1) (0.5,0);
+	TERM average:= (0,0) (0.5,1) (1,0);
+	TERM good:= (0.5,0) (0.9,1) (1,0);
+	TERM veryGood:= (0.8,0) (1,1);
+	METHOD : COG;
+	DEFAULT := 0.5;
+END_DEFUZZIFY
+
+DEFUZZIFY child
+TERM veryBad := (0,1) (0.2,0);
+	TERM veryBad := (0,1) (0.2,0);
+	TERM bad := (0,0) (0.1,1) (0.5,0);
+	TERM average:= (0,0) (0.5,1) (1,0);
+	TERM good:= (0.5,0) (0.9,1) (1,0);
+	TERM veryGood:= (0.8,0) (1,1);
+	METHOD : COG;
+	DEFAULT := 0.5;
+END_DEFUZZIFY
+
+DEFUZZIFY elder
+	TERM veryBad := (0,1) (0.2,0);
+	TERM bad := (0,0) (0.1,1) (0.5,0);
+	TERM average:= (0,0) (0.5,1) (1,0);
+	TERM good:= (0.5,0) (0.9,1) (1,0);
+	TERM veryGood:= (0.8,0) (1,1);
+	METHOD : COG;
+	DEFAULT := 0.5;
+END_DEFUZZIFY
+
+//define RuleBlock
+RULEBLOCK num_people
+	AND : MIN;
+	
+	RULE 1 : IF room_area IS verySmall OR room_num IS small THEN num_people IS veryBad;
+	RULE 2 : IF room_area IS small AND room_num IS normal THEN num_people IS bad;
+	RULE 3 : IF room_area IS medium AND room_num IS normal THEN num_people IS average;
+	RULE 4 : IF room_area IS big AND room_num IS normal THEN num_people IS average;
+	RULE 5 : IF room_area IS veryBig OR room_num IS big THEN num_people IS good;
+	RULE 6 : IF room_area IS extremelyBig OR room_num IS veryBig THEN num_people IS veryGood;
+END_RULEBLOCK
+
+RULEBLOCK budget
+	AND : MIN;
+	
+	RULE 1 : IF room_price IS veryCheap THEN budget IS veryBad;
+	RULE 2 : IF room_price IS cheap THEN budget IS bad;
+	RULE 3 : IF room_price IS medium THEN budget IS average;
+	RULE 4 : IF room_price IS expensive THEN budget IS good;
+	RULE 5 : IF room_price IS veryExpensive THEN budget IS veryGood;
+	RULE 6 : IF room_status IS none THEN budget IS good;
+	RULE 7 : IF room_status IS well THEN budget IS bad;
+END_RULEBLOCK
+
+RULEBLOCK traffic
+	RULE 1 : IF if_subway IS true THEN traffic IS veryGood;
+	RULE 2 : IF if_subway IS false THEN traffic IS bad;
+	RULE 3 : IF area IS center THEN traffic IS veryGood;
+	RULE 4 : IF area IS faraway THEN traffic IS veryBad;
+END_RULEBLOCK
+
+RULEBLOCK invest
+	RULE 1 : IF area IS center THEN invest IS veryGood;
+	RULE 2 : IF if_subway IS false THEN invest IS bad;
+	RULE 3 : IF room_time IS veryNew THEN invest IS good;
+	RULE 4 : IF room_time IS veryOld THEN invest IS veryBad; 
+END_RULEBLOCK
+
+RULEBLOCK rigid
+	RULE 1 : IF area IS center THEN rigid IS veryGood;
+	RULE 2 : IF area IS faraway THEN rigid IS veryBad;
+	RULE 3 : IF if_subway IS false THEN rigid IS veryBad;
+	RULE 4 : IF room_status IS none THEN rigid IS bad;
+	RULE 5 : IF room_price IS veryExpensive THEN rigid IS veryBad;
+	RULE 6 : IF room_price IS expensive THEN rigid IS bad;
+END_RULEBLOCK
+
+RULEBLOCK improvement
+	RULE 1 : IF room_area IS verySmall THEN improvement IS veryBad;
+	RULE 2 : IF room_area IS small THEN improvement IS bad;
+	RULE 3 : IF room_num IS small THEN improvement IS veryBad;
+	RULE 4 : IF room_chaoxiang IS bad THEN improvement IS veryBad;
+	RULE 5 : IF room_time IS veryOld THEN improvement IS veryBad;
+	RULE 6 : IF room_chaoxiang IS n_and_s THEN improvement IS veryGood;
+END_RULEBLOCK
+
+RULEBLOCK child			//至少两件室 内环＞中环＞外环
+	RULE 1 : IF room_num IS small THEN child IS veryBad; 
+	RULE 2 : IF room_floor IS high THEN child IS bad;
+	RULE 3 : IF area IS center THEN child IS good;
+	RULE 4 : IF area IS faraway THEN child IS bad;
+END_RULEBLOCK
+
+RULEBLOCK elder
+	RULE 1 : IF room_floor IS high THEN elder IS veryBad;
+	RULE 2: IF room_chaoxiang IS n_and_s THEN elder IS veryGood;
+	RULE 3 : IF room_chaoxiang IS south THEN elder IS good;
+	RULE 4 : IF room_chaoxiang IS bad THEN elder IS veryBad;
+	RULE 5 : IF room_floor IS low THEN elder IS good;
+END_RULEBLOCK
+
+END_FUNCTION_BLOCK

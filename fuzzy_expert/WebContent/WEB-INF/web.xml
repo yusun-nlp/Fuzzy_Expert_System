@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>fuzzy_expert</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>Evaluate</servlet-name>
+    <servlet-class>com.fuzzy.Evaluate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Evaluate</servlet-name>
+    <url-pattern>/servlet/Evaluate</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HouseList</servlet-name>
+    <servlet-class>com.fuzzy.HouseList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HouseList</servlet-name>
+    <url-pattern>/servlet/HosueList</url-pattern>
+  </servlet-mapping>
+</web-app>
